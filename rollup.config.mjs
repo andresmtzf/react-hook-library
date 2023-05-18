@@ -34,9 +34,9 @@ export default [
     external: ['react', 'react-dom'],
   },
   {
-    input: 'index.d.ts',
+    input: 'src/index.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
-    //external: [/\.scss$/],
+    external: [/\.scss$/],
   },
 ]
