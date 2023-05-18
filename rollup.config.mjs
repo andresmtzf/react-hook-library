@@ -1,11 +1,8 @@
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
-import sass from 'rollup-plugin-sass'
 import packageJson from './package.json' assert { type: 'json' }
 import dts from 'rollup-plugin-dts'
-
-//const packageJson = require('./package.json')
 
 export default [
   {
@@ -23,12 +20,8 @@ export default [
         sourcemap: true,
       },
     ],
-    plugins: [
-      resolve(),
-      commonjs(),
-      typescript({ tsconfig: './tsconfig.json' }),
-      sass({ insert: true }),
-    ],
+    plugins: [resolve(), commonjs(), typescript({ tsconfig: './tsconfig.json' }), commonjs()],
+    external: ['react', 'react-dom'],
   },
   {
     input: 'dist/esm/types/index.d.ts',
