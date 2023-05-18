@@ -17,7 +17,6 @@ export default [
         format: 'cjs',
         sourcemap: true,
         exports: 'named',
-        //strict: false
       },
       {
         file: packageJson.module,
@@ -31,14 +30,13 @@ export default [
       typescript({ tsconfig: './tsconfig.json' }),
       //postcss(),
       sass({ insert: true }),
-      commonjs(),
     ],
     external: ['react', 'react-dom'],
   },
   {
-    input: 'dist/esm/types/index.d.ts',
+    input: 'index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
-    external: [/\.scss$/],
+    //external: [/\.scss$/],
   },
 ]
