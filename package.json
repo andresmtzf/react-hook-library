@@ -1,6 +1,6 @@
 {
   "name": "and-lib-hooks-v3",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Ejemplo de libreria de react hooks",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
