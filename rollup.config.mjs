@@ -3,6 +3,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
 import packageJson from './package.json' assert { type: 'json' }
+import sass from 'rollup-plugin-sass'
 //import external from 'rollup-plugin-peer-deps-external'
 
 //const packageJson = require('./package.json')
@@ -29,6 +30,7 @@ export default [
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
       //postcss(),
+      sass({ insert: true }),
       commonjs(),
     ],
     external: ['react', 'react-dom'],
@@ -37,6 +39,6 @@ export default [
     input: 'dist/esm/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
-    external: [/\.css$/],
+    external: [/\.scss$/],
   },
 ]
