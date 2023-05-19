@@ -13,13 +13,13 @@ export default [
     input: './src/index.ts',
     output: [
       {
-        file: 'dist/index.js',
+        dir: 'dist',
         format: 'cjs',
         sourcemap: true,
         exports: 'named',
       },
       {
-        file: 'dist/index.esm.js',
+        dir: 'dist',
         format: 'esm',
         sourcemap: true,
       },
