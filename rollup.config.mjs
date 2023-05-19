@@ -10,6 +10,33 @@ import sass from 'rollup-plugin-sass'
 
 export default [
   {
+    input: './src/index.ts',
+    output: {
+      file: 'dist/index.js',
+      format: 'umd',
+      name: 'and-lib-hooks-v4',
+      globals: { react: 'React' },
+      sourcemap: 'inline',
+      exports: 'named',
+    },
+    plugins: [
+      resolve(),
+      commonjs(),
+      typescript({ tsconfig: './tsconfig.json' }),
+      sass({ insert: true }),
+    ],
+    external: ['react', 'react-dom'],
+  },
+  {
+    input: 'src/index.ts',
+    output: [{ file: 'dist/index.d.ts', format: 'esm' }],
+    plugins: [dts()],
+    external: [/\.scss$/],
+  },
+]
+
+/* export default [
+  {
     input: 'src/index.ts',
     output: [
       {
@@ -28,7 +55,6 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
-      //postcss(),
       sass({ insert: true }),
     ],
     external: ['react', 'react-dom'],
@@ -39,4 +65,4 @@ export default [
     plugins: [dts()],
     external: [/\.scss$/],
   },
-]
+] */
