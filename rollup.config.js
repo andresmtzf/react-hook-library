@@ -18,7 +18,7 @@ export default [
       {
         dir: 'dist',
         format: 'esm',
-        sourcemap: true,
+        //sourcemap: true,
         sourcemapExcludeSources: false,
       },
     ],
