@@ -1,5 +1,5 @@
 {
-  "name": "and-lib-hooks-v4",
+  "name": "and-lib-hooks-v5",
   "version": "0.0.5",
   "description": "Ejemplo de libreria de react hooks",
   "main": "dist/cjs/index.js",
