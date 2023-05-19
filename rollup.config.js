@@ -15,7 +15,7 @@ export default [
       {
         file: 'dist/index.js',
         format: 'cjs',
-        sourcemap: 'true',
+        sourcemap: true,
         exports: 'named',
       },
       {
@@ -28,7 +28,7 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
-      sass({ insert: true }),
+      //sass({ insert: true }),
     ],
     external: ['react', 'react-dom'],
   },
@@ -36,7 +36,7 @@ export default [
     input: 'src/index.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
-    external: [/\.scss$/],
+    //external: [/\.scss$/],
   },
 ]
 
