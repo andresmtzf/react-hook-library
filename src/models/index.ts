@@ -1,1 +1,1 @@
-export { default as Paginado } from './paginado'
+export { default } from './paginado'
