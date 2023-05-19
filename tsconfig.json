@@ -4,7 +4,7 @@
     "module": "ESNext",
     "jsx": "react",
     "sourceMap": true,
-    "outDir": "dist",
+    "outDir": "dist/esm",
     "strict": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
