@@ -1,4 +1,4 @@
-import { Paginado } from './paginado'
+//import { Paginado } from './paginado'
 
 export interface Notificacion {
   idNotificacion: string
@@ -9,6 +9,8 @@ export interface Notificacion {
   esSeleccionada?: boolean
 }
 
-export interface PaginadoNotificaciones extends Paginado {
+export default Notificacion
+
+/* export interface PaginadoNotificaciones extends Paginado {
   notificaciones: Notificacion[]
-}
+} */
