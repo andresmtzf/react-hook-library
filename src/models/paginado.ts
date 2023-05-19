@@ -4,4 +4,3 @@ export interface Paginado {
   totalRegistros: number
   totalPaginas: number
 }
-export default Paginado
