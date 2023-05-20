@@ -1,5 +1,5 @@
-export { useToggle } from './hooks/useToggle'
+export * from './hooks'
 export * from './components'
 export * from './models'
-export { default as imprimirElementos } from './utils/funcionGenerica'
-export { default as obtenerIniciales } from './utils/obtenerIniciales'
+export * from './utils/funcionGenerica'
+export * from './utils/obtenerIniciales'
