@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-export type WithChildren = {
+type WithChildren = {
   children?: ReactNode
 }
 

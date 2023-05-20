@@ -1,6 +1,4 @@
-//import { Paginado } from './paginado'
-
-export interface Notificacion {
+interface Notificacion {
   idNotificacion: string
   idUsuario: string
   descripcion: string
@@ -10,7 +8,3 @@ export interface Notificacion {
 }
 
 export default Notificacion
-
-/* export interface PaginadoNotificaciones extends Paginado {
-  notificaciones: Notificacion[]
-} */
