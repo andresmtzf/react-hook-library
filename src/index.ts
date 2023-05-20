@@ -1,5 +1,4 @@
 export * from './hooks'
 export * from './components'
 export * from './models'
-export * from './utils/funcionGenerica'
-export * from './utils/obtenerIniciales'
+export * from './utils'
